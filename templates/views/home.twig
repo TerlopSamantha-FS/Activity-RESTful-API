@@ -1,0 +1,25 @@
+{# <h1>Hello {{name}} </h1>
+<ul>
+    {% for user in users %}
+    <li>
+        <lable>name:</label> {{ user.name }}
+        <br />
+        <lable>email:</label> {{ user.email }}
+    </li>
+    {% endfor %}
+</ul> #}
+
+{% extends "layouts/base.twig" %}
+
+{% block main_content %}
+    <p>This content is coming from templates/views/home.twig</p>
+{% endblock %}
+
+{% block scripts %}
+    <p>Scripts are loaded</p>
+    <script>
+        alert('Hello World!')
+    </script>
+{% endblock %}
+
+{% block title %}Home View{% endblock %}

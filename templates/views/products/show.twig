@@ -1,7 +1,7 @@
 {% extends 'layouts/base.twig' %}
 
 {% block main_content %}
-    <h2>About Nike Shoe {{ products.name }}</h2>
+    <h2>About {{ products.name }}</h2>
     <ul>
         <li>
             <label>Id: </label> {{ products.id }}
@@ -9,12 +9,13 @@
         <li>    
             <label>Name: </label> {{ products.name }}
         </li>
+                <li>    
+            <label>Price: </label> {{ products.price }}
+        </li>
     </ul>
     <p>
         <a href="/products/{{ products.id }}/edit">Edit</a> | <a href="/products/{{ products.id }}/delete">Delete</a>
     </p>
-     <p>
-        <a href="/products/{{ products.id }}/create">Create New Shoe</a>
-    </p>
+    
    
 {% endblock %}

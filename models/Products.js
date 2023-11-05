@@ -1,5 +1,5 @@
 let products = [
-    { id: "1", slug: "nike-shoe", name: "Nike Shoe"}
+    { id: "1", slug: "nike-shoe", name: "Nike Shoe", price: 23 }
 ]
 
 const all = () => {
@@ -8,7 +8,7 @@ const all = () => {
 
 const create = (product) => {
     const id = Number(products[products.length - 1].id) + 1 + ""
-    products.push({ id, ...products })
+    products.push({ id, ...product })
     return products[products.length - 1]
 }
 
@@ -24,8 +24,8 @@ const update = (id, product) => {
 }
 
 const remove = (id) => {
-    products = products.filter(p => p.id !== id)
-    return products
+    products = products.filter((product) => product.id !== id);
+    return products;
 }
 
 module.exports = { all, create, find, update, remove}

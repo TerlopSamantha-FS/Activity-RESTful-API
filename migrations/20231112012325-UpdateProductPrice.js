@@ -11,7 +11,7 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.changeColumn('Products', 'price', {
+    await queryInterface.addColumn('Products', 'price', {
       type: Sequelize.FLOAT,
       defaultValue: 0.00,
       allowNull: false
@@ -25,7 +25,7 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.changeColumn('Products', 'price', {
+    await queryInterface.removeColumn('Products', 'price', {
       type: Sequelize.INTEGER,
       defaultValue: 0,
       allowNull: false

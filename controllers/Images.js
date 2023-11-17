@@ -12,7 +12,7 @@ const form = async (req, res) => {
         const image = await Image.findByPk(req.params.id)
         res.render('views/images/edit', { image, variants })
     } else{
-        res.render('views/images/create', {variants})
+        res.render('views/images/create', { variants })
     }
 }
 

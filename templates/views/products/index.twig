@@ -3,19 +3,13 @@
 {% block main_content %}
     <h2>All Products:</h2>
     <ul>
-        <li><h3>Name | Price</h3></li>
-        {% for products in products %}
+        {% for product in products %}
         <li>
-             {{products.name}} <span>|</span> {{products.price}} - 
-                <a href="/products/{{ products.id }}">Edit</a>
-                <a href="/products/{{ products.id }}/delete">Delete</a>
+             {{product.title}} <span></span> {{product.price}} - 
+                <a href="/products/{{ product.id }}">Edit</a>
+                <a href="/products/{{ product.id }}/delete">Delete</a>
         </li>
-        <br>
-       
         {% endfor %}
      </ul>
-
-    <p>
-        <a href="/products/new">Create New Shoe</a>
-    </p>
+        <a href="/products/new">Create Product</a>
 {% endblock %}

@@ -3,7 +3,6 @@ const { Variant, Product } = require('../models')
 const index = async (req, res) => {
     const variants = await Variant.findAll()
      res.render('views/variants/index', { variants })
-     // res.json(variants)
 }
 
 const form = async (req, res) => {

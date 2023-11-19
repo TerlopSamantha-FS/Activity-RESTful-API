@@ -3,7 +3,6 @@ const { Image, Variant } = require('../models')
 const index = async (req, res) => {
     const images = await Image.findAll()
      res.render('views/images/index', { images })
-    // res.json(images)
 }
 
 const form = async (req, res) => {

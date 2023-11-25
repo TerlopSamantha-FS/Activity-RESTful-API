@@ -1,18 +1,16 @@
 {% extends 'layouts/base.twig' %}
 
 {% block main_content %}
-    <h2>About Image #{{ image.id}}</h2>
-    <ul style="list-style: none;">
+    <h2 class="text-2xl">About Image #{{ image.id }}</h2>
+    <ul class="list-none">
         <li>
-            <label>Id: </label> {{ image.id }}
+            <label class="font-semibold">Id: </label> {{ image.id }}
         </li>
-        <li>    
-            <label>Variant: </label> {{ variant.title }}
+        <li>
+            <label class="font-semibold">Assigned Variant: </label> {{ variant.title }}
         </li>
     </ul>
-    <p>
-        <a href="/images/{{ image.id }}/edit">Edit</a> | <a href="/images/{{ image.id }}/delete">Delete</a>
+    <p class="mt-4">
+        <a href="/images/{{ image.id }}/edit" class="text-blue-600">Edit</a> | <a href="/images/{{ image.id }}/delete" class="text-red-600">Delete</a>
     </p>
-    
-   
 {% endblock %}

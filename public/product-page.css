@@ -1,0 +1,47 @@
+/* Add your custom styles here */
+.panel {
+    border: none;
+    box-shadow: none;
+}
+
+.panel-body {
+    border-color: #eff2f7;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.panel-title {
+    color: #2A3542;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pro-img-details img {
+    width: 100%;
+}
+
+.pro-img-list {
+    margin: 10px 0 0 -15px;
+    width: 100%;
+    display: inline-block;
+}
+
+.pro-img-list a {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.pro-img-list img {
+    width: 115px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.pro-d-title {
+    font-size: 16px;
+    margin-top: 0;
+}

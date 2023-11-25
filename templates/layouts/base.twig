@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASL Project - {% block title %}Home{% endblock %}</title>
-</head>
-<body>
-    {% include '../partials/_header.twig'  %}
-    {% block main_content %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}ASL Class{% endblock %}</title>
+    {% block scripts %}
+        <script type="text/javascript" src="app.js"></script>
     {% endblock %}
-    {% include '../partials/_footer.twig'  %}
+    {% block stylesheets %}
+        <!-- Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="app.css">
+    {% endblock %}
+</head>
+<body class="bg-blue-300 flex flex-col min-h-screen">
+
+    {% block header %}
+        {% include "partials/_header.twig" %}
+    {% endblock %}
+
+    <div> 
+        <h1>{% block title %}E-Commerce Shop{% endblock %}</h1>
+    </div>
+    <div class="flex-1">
+        {% block main_content %}
+        {# {% include "views/store/show.twig" %} #}
+        {% endblock %}
+    </div>
+
+    {% block footer %}
+        {% include "partials/_footer.twig" %}
+    {% endblock %}
 </body>
 </html>

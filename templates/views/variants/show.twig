@@ -1,32 +1,29 @@
 {% extends 'layouts/base.twig' %}
 
 {% block main_content %}
-    <h2>About {{ variant.title }}</h2>
-    <ul style="list-style: none;">
-       
-       <li>
-            <label>Product Id: </label> {{ variant.id }}
-        </li>
-        <li>    
-            <label>Title: </label> {{ variant.title }}
+    <h2 class="text-2xl mb-4">About {{ variant.title }}</h2>
+    <ul class="list-none">
+        <li>
+            <label class="font-semibold">Id:</label> {{ variant.id }}
         </li>
         <li>
-			<label>Slug: </label> {{ variant.slug }}
-		</li>
+            <label class="font-semibold">Title:</label> {{ variant.title }}
+        </li>
         <li>
-			<label>Description: </label> {{ variant.description }}
-		</li>
-		<li>
-			<label>Price: </label> {{ variant.price }}
-		</li>
+            <label class="font-semibold">URL Slug:</label> {{ variant.slug }}
+        </li>
         <li>
-			<label>Inventory: </label> {{ variant.inventory }}
-		</li>
-         
+            <label class="font-semibold">Price:</label> {{ variant.price }}
+        </li>
+        <li>
+            <label class="font-semibold">Available Inventory:</label> {{ variant.inventory }}
+        </li>
+        <li>
+            <label class="font-semibold">Description:</label>
+            <p class="max-w-500px"><em>{{ variant.description|raw }}</em></p>
+        </li>
     </ul>
-    <p>
-        <a href="/variants/{{ variant.id }}/edit">Edit</a> | <a href="/variants/{{ variant.id }}/delete">Delete</a>
+    <p class="mt-4">
+        <a href="/variants/{{ variant.id }}/edit" class="text-blue-600">Edit</a> | <a href="/variants/{{ variant.id }}/delete" class="text-red-600">Delete</a>
     </p>
-    
-   
 {% endblock %}
